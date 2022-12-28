@@ -1,0 +1,9 @@
+.footer-check{
+    height: 70vh;
+}
+@media only screen and (max-width: 688px) {
+  .footer-check {
+
+    height: 250vh;
+  }
+}
