@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <table class="form-table">
+        <tr>
+        <td><label for="uname">User Name :</label></td>
+        <td><input type="text" id="uname" name="uname" value="" /></td>
+        </tr>
+        <tr>
+        <td><label for="upass">User Password :</label></td>
+        <td><input type="password" id="upass" name="upass" value="" /></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" name="btn" value="Submit"
+        onclick="validation()" /></td>
+        </tr>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+    function validation() {
+    var uname = document.forms[0].uname.value;
+    var upass = document.forms[0].upass.value;
+    if (uname == "" || upass == "") {
+    alert("Both fields should be fulfilled");
+    return;
+    }
+    if (upass.length < 6 || upass.length > 12) {
+    alert("Password must be 6 to 12 characters");
+    return;
+    }
+    if (uname.slice(0, 1) == "_" || uname.slice(0, 1) == "@" ||
+    uname.match(/^[0-9]/) != null) {
+    alert("Username should not start with _, @, and Number");
+    return;
+    }
+    }
+    </script>   
+</body>
+</html>

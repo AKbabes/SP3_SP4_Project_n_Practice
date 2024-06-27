@@ -1,0 +1,185 @@
+
+
+.technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+.grid-container--technology {
+    --flow-space: 2rem;
+    padding-inline: 0;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--technology > picture {
+    grid-area: image;
+    border-bottom: 1px solid hsl( var(--clr-white) / .1);
+    /* fix right/left side gaps */
+    margin-inline: -0.5rem;
+}
+
+.grid-container--technology > .number-links {
+    grid-area: tabs;
+}
+
+.grid-container--technology > .technology-details {
+    grid-area: content;
+    padding-inline: 1rem;
+}
+
+.number-links > * {
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 1.4px solid hsl( var(--clr-white) / .25);
+    border-radius: 50%;
+    padding: 1em;
+    color: hsl(var(--clr-white));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.number-links > *:hover,
+.number-links > *:focus { 
+    background-color: hsl( var(--clr-white) / .5);
+}
+
+.number-links > [aria-selected="true"] {
+    color: hsl( var(--clr-dark) );
+    background-color: hsl( var(--clr-white) / 1); 
+    
+}
+
+
+/************************************ 560px ***********************************/
+@media (min-width: 560px) {
+    .grid-container--technology > .number-links {
+        display: flex;
+    }
+
+    .number-links > * {
+        font-size: 1.4rem;
+        width: 3.75rem;
+        height: 3.75rem;
+        padding: 1.4rem;
+    }
+
+    .grid-container--technology > picture {
+        width: 102%;
+    }
+
+    .grid-container--technology > picture > img{
+        width: 102%;
+    }
+}
+
+
+/************************************ 700px ***********************************/
+@media (min-width: 700px) {
+    .technology-details > p {
+        width: 60%;
+    }
+}
+
+
+/************************************ 950px ************************************/
+@media (min-width: 950px) {
+    .technology {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+
+    .grid-container--technology {
+        grid-template-columns:  4rem 1fr 1fr 0.3fr;
+        align-items: start;
+        grid-template-areas: 
+            'title title title'
+            'tabs content image'
+            'tabs content image';
+        /* same as logo margin */
+        margin-left: clamp(1.5rem, 5vw, 3.5rem)
+    }
+
+    .grid-container--technology > .number-links {
+        display: flex;
+        flex-direction: column;
+        justify-self: left;
+        margin-top: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .grid-container--technology > .technology-details {
+        margin-top: 6rem;
+        padding-inline: 0;
+    }    
+
+    .technology-details > p {
+        width: 100%;
+        margin-inline: 0;
+        --flow-space: 2rem;
+    }
+    
+    .grid-container--technology > picture {
+        grid-column: span 2;
+        align-self: center; 
+        margin-bottom: 2rem;
+        margin-inline: 0;
+        justify-self: end;
+    }
+
+    .grid-container--technology img {
+        width: 100%;
+    }
+}
+
+/********************************************** 1100px *******************************/
+@media (min-width: 1100px) {
+    .grid-container--technology > .number-links,
+    .grid-container--technology > .technology-details {
+        margin-top: 10rem;
+    }
+}
+
+
+/********************************************** 1250px *******************************/
+@media (min-width: 1250px) {
+    .grid-container--technology {
+        grid-template-columns:  5rem 1.6fr 1fr 0.3fr;
+        /* left margin based on logo and horizontal line margins */
+        margin-left: clamp(8.5rem, 7vw + 7rem, 10.5rem);
+    }
+
+    .number-links > * {
+        font-size: 2rem;
+        width: 5rem;
+        height: 5rem;
+        padding: 1.5rem;
+    }
+
+    .technology-details > p {
+        width: 85%;
+    }
+}
+
+
+/********************************************** 1300px *******************************/
+@media (min-width: 1300px) {
+    .grid-container--technology {
+        grid-template-columns: 8rem 1.6fr 1fr 0.3fr;
+    }
+}
+
+
+/********************************************** 1350px *******************************/
+@media (min-width: 1350px) {
+    .technology-details > p {
+        width: 85%;
+    }
+}
+

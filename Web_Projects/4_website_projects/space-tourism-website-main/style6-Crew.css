@@ -1,0 +1,182 @@
+
+.dot-links > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    padding: .55rem;
+    background-color: hsl( var(--clr-white) / .25);
+}
+ 
+.dot-links > *:hover,
+.dot-links > *:focus { 
+    background-color: hsl( var(--clr-white) / .5);
+}
+
+.dot-links > [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1); 
+}
+
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--crew > picture {
+    grid-area: image;
+    max-width: 60%;
+    border-bottom: 1px solid hsl( var(--clr-white) / .1);
+}
+
+.grid-container--crew > .dot-links {
+    grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+    grid-area: content;
+}
+
+.crew-details h2 {
+    color: hsl( var(--clr-white) / .5);
+}
+
+
+/************************************ 560px ***********************************/
+@media (min-width: 560px) {
+    .crew {
+        background-position: center center;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+    
+    .grid-container--crew {
+        padding-bottom: 0;
+        grid-template-areas: 
+            'title'
+            'content'
+            'tabs'
+            'image';
+    }
+
+    .crew-details h2 {
+        margin-top: 2rem;
+    }
+
+    .crew-details > p {
+        margin-inline: auto;
+        width: 60%;
+    }
+
+    .dot-links {
+        margin-top: 3rem;
+    }
+}
+
+
+
+/************************************ 950px ************************************/
+@media (min-width: 950px) {
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+
+    .grid-container--crew {
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: 1fr 1.75fr 0.75fr;
+        justify-items: start;
+        grid-template-areas: 
+            'title . image'
+            'content . image '
+            'tabs . image';
+        /* same as logo margin */
+        margin-inline: clamp(1.5rem, 5vw, 3.5rem); 
+    }
+
+    .crew-details {
+        align-self: start;
+        margin-top: 0;
+    }
+
+    .crew-details .fs-name,
+    .crew-details p {
+        margin-inline: 0;
+    }
+
+    .crew-details .fs-name {
+        width: 100%;
+    }
+
+    .crew-details > p {
+        width: 26rem;
+    }
+
+    #pilot-tab > p {
+        width: 28rem;
+    }
+
+    .grid-container--crew > picture {
+        align-self: end; 
+        max-width: 100%;
+    }
+
+    .dot-links {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-self: start;
+    }
+
+}
+
+
+/********************************************** 1250px *******************************/
+@media (min-width: 1250px) {
+    .grid-container--crew {
+        grid-template-columns: 1.1fr 0.15fr 1fr;
+        margin-left: clamp(8.5rem, 7vw + 7rem, 10.5rem);
+        margin-right: 1.5rem;
+    }
+
+    #pilot-image,
+    #crew-image,
+    #mission-image,
+    #commander-image {
+        grid-column: auto / span 2;
+        width: 80%;
+        justify-self: center;
+    }
+}
+
+/********************************************** 1350px *******************************/
+@media (min-width: 1350px) {
+    .grid-container--crew {
+        grid-template-columns: 1fr 0.15fr 1fr;
+        margin-left: clamp(8.5rem, 7vw + 7rem, 10.5rem);
+        margin-right: 2.3rem;
+    }
+
+    .crew-details .fs-name {
+        width: 100%;
+    }
+
+    #pilot-image,
+    #crew-tab,
+    #mission-tab,
+    #commander-tab,
+    #crew-image
+    {
+        grid-column: auto / span 2;
+    }
+
+    #pilot-image,
+    #crew-image,
+    #mission-image,
+    #commnader-image 
+    {
+        width: 100%;
+        justify-self: start;
+    } 
+}
+
+

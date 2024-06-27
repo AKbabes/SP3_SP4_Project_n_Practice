@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Time</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+<script>
+    function result() {
+    var demo = document.getElementById('demo');
+    var dateTime = new Date();
+    var hours = String(dateTime.getHours()).padStart(2, '0');
+    var minutes = String(dateTime.getMinutes()).padStart(2, '0');
+    var seconds = String(dateTime.getSeconds()).padStart(2, '0');
+    var watch = hours + ':' + minutes + ':' + seconds;
+    demo.innerHTML = watch;
+}
+setInterval(result, 1000);
+</script>
+</body>
+</html>

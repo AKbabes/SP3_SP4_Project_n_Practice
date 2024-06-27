@@ -1,0 +1,27 @@
+
+.form-input-2 {
+    margin: 0 0 0 0;
+}
+
+.form-2 {
+    margin: 0 20%;
+}
+
+.vc-1{
+
+}
+
+@media (max-width: 600px) {
+    .form-input-2 {
+        margin-bottom: 10px;
+    }
+
+    .form-2 {
+        margin: 0 0;
+    }
+
+    .vc-1{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}

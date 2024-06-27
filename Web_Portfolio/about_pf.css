@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color:rgb(222, 223, 223);
+}
+h2{
+    text-align: center;
+    margin-top: 3%;
+    color: #f9004d;
+}
+.table-elements{
+    width: 60%;
+    margin: 0 auto;
+    color:#055d8d;
+    box-shadow: 0 0 2px #f9004d;
+    margin-top: 30px;
+    padding: 4px;
+}
+.table-elements thead tr{
+    background-color: rgb(212, 212, 212);
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold; 
+}
+.table-elements td{
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+    font-weight:bold
+}

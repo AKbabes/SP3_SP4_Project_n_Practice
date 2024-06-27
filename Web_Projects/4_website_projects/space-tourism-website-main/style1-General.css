@@ -1,0 +1,171 @@
+
+:root {
+    /* colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+
+    /* font-sizes */
+    --fs-frontPageName: 5rem;
+    --fs-destinationNav: 0.875rem;
+    --fs-planetName: 3.5rem;
+    --fs-avgDistance: 0.875rem;
+    --fs-km: 1.75rem;
+    --fs-pageTitle: 1rem;
+    --fs-terminology: 0.875rem;
+    --fs-crewJob: 1rem;
+    --fs-name: 1.5rem;
+    --fs-paragraph: 0.9375rem;
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+
+    /* letter spacing */
+    --letter-spacing-1: 2.36px; 
+    --letter-spacing-2: 2.7px; 
+    --letter-spacing-3: 3.36px; 
+    --letter-spacing-4: 4.72px; 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+p {
+    font-weight: 400;
+}
+
+body {
+    background-size: cover;
+    background-position: bottom center;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-light) );
+    background-color: hsl( var(--clr-dark) );
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr 6rem;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/************************************ 500px ***********************************/
+@media (min-width: 500px) {
+    article > p {
+        width: 70%;
+    }
+}
+
+
+/************************************ 560px ***********************************/
+@media (min-width: 560px) {
+    :root {
+        --fs-frontPageName: 9.375rem;
+        --fs-destinationNav: 1rem;
+        --fs-planetName: 5rem;
+        --fs-avgDistance: 0.875rem;
+        --fs-km: 1.75rem;
+        --fs-pageTitle: 1.25rem;
+        --fs-terminology: 1rem;
+        --fs-crewJob: 1.5rem;
+        --fs-name: 2.5rem;
+        --fs-paragraph: 1rem;
+    }
+}
+
+
+/************************************ 950px ************************************/
+@media (min-width: 950px) {
+    :root {
+        --fs-frontPageName: 9.375rem;
+        --fs-destinationNav: 1rem;
+        --fs-planetName: 6.25rem;
+        --fs-avgDistance: 0.875rem;
+        --fs-km: 1.75rem;
+        --fs-pageTitle: 1.75rem;
+        --fs-terminology: 1rem;
+        --fs-crewJob: 2rem;
+        --fs-name: 3.5rem;
+        --fs-paragraph: 1.125rem;
+    }
+}
+
+
+/********************************************** 1250px *******************************/
+@media (min-width: 1250px) {
+    :root {
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+
+/********************************************** 1440px *******************************/
+@media (min-width: 1440px) {
+    body {
+      max-width: 1440px;
+      max-height: 900px;
+      margin: 0 auto;
+    }
+  
+    nav {
+      max-width: 1440px;
+      margin: 0 auto;
+    } */
+
+    .grid-container--home,
+    .grid-container--destination,
+    .grid-container--crew,
+    .grid-container--technology {
+        justify-items: start;
+        align-content: start;
+    }
+} 
+
+

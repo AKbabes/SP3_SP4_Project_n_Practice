@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Marriage Event",
+        "price": "20,000",
+        "description": "A wedding reception is a party usually held after the completion of a marriage ceremony as hospitality for those who have attended the wedding",
+        "img": "./Threepic/five.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Seminar Event",
+        "price": "25,000",
+        "description": "A seminar is a more formal event, focused on training or information sharing, offered in an academic instruction-style setting.",
+        "img": "./Threepic/formal.jpg"
+        
+    },
+    {
+        "id": 3,
+        "name": "Formal PhotoShoot",
+        "price": "10,000",
+        "description": "A formal portrait is not a snapshot but a carefully arranged pose under effective lighting conditions.",
+        "img": "./Threepic/seminar.jpg"
+    }
+]

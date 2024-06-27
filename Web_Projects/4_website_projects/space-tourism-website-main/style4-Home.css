@@ -1,0 +1,187 @@
+
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+.round-anchor {
+    position: relative;
+    top: 4rem;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+    font-size: 1.3rem;
+    background: hsl( var(--clr-white));
+    z-index: 1;
+}
+
+.round-anchor::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+ 
+.round-anchor:hover::after,
+.round-anchor:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.fs-frontPageName {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.grid-container--home p {
+    margin-bottom: 5rem;
+    width: 93%;
+    margin-inline: auto;
+}
+
+.grid-container--home h1 {
+    margin-top: 2rem;
+}
+
+
+/************************************ 450px ***********************************/
+@media (min-width: 450px) {
+    .grid-container--home p {
+        width: 80%;
+    }
+}
+
+/************************************ 500px ***********************************/
+@media (min-width: 500px) {
+    .round-anchor {
+        font-size: 1.7rem;
+    }
+
+    .grid-container--home p {
+        width: 70%;
+    }
+}
+
+
+/************************************ 560px ***********************************/
+@media (min-width: 560px) {
+    .home {
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+
+    .grid-container--home div {
+        margin-top: 4rem;
+    }
+
+    .grid-container--home p {
+        width: 70%;
+        margin-inline: auto;
+    }
+
+    .round-anchor {
+        font-size: 2rem;
+        top: 0;
+    }
+}
+
+
+/************************************ 700px ***********************************/
+@media (min-width: 700px) {
+    .grid-container--home > p {
+        width: 58%;
+    }
+}
+
+
+/************************************ 950px ************************************/
+@media (min-width: 950px) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+
+    .grid-container--home {
+        grid-template-columns: minmax(0, 34rem) minmax(0, 34rem);
+        max-height: 100%;
+        align-items: end;
+        margin-bottom: 4rem;
+        /* same as logo margin */
+        margin-inline: clamp(1.5rem, 5vw, 3.5rem); 
+    }
+
+    .grid-container--home > *:first-child {
+        grid-column: 1;
+    }
+
+    .grid-container--home > *:last-child {
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .grid-container--home .fs-frontPageName {
+        font-size: 8rem;
+    }
+
+    .grid-container--home p {
+        margin-bottom: 0;
+        margin-inline: 0;
+        width: 100%;
+    }
+
+    .round-anchor {
+        justify-self:center;
+        align-self: center;
+        font-size: 2.1rem;
+    }
+}
+
+
+/********************************************** 1250px *******************************/
+@media (min-width: 1250px) {
+    .grid-container--home > *:first-child {
+        grid-column: 1;
+    }
+
+    .grid-container--home > *:last-child {
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .grid-container--home {
+        grid-template-columns: 1fr 2fr;
+        max-height: 100%;
+        align-items: end;
+        justify-self: start;
+        /* left margin based on logo and horizontal line margins */
+        margin-left: clamp(8.5rem, 7vw + 7rem, 10.5rem);
+    }
+
+    .grid-container--home p {
+        width: 29rem;
+    }
+
+    .grid-container--home .fs-frontPageName {
+        font-size: 9.375rem;
+    }
+}
+
+
+/********************************************** 1350px *******************************/
+@media (min-width: 1350px) {
+    .grid-container--home {
+        margin-left: clamp(8.5rem, 7vw + 7rem, 10.5rem);
+        margin-right: clamp(8rem, 7vw + 6.5rem, 10rem);
+    }
+}
+
+
+
+

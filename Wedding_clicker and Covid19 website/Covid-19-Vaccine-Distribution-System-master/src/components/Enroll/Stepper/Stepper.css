@@ -1,0 +1,23 @@
+
+.form-input {
+    margin: 10px 20% 10px 0;
+}
+
+.stepper-mg {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.MuiTextField-root {
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .form-input {
+        margin: 10px 0 10px 0;
+    }
+
+    .stepper-mg {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

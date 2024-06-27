@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tast</title>
+</head>
+<body>
+    <table border="1" style="
+        width: 90%;
+        height: 120px;">
+        <tr>
+            <td style="text-align: center;">A</td>
+            <td>B</td>
+            <td>C</td>
+            <td style="width: 80%;">D</td>
+        </tr>
+    </table>
+    
+    <table border="1" style="
+        width: 90%;
+        height: 130px;">
+        <tr>
+            <td>E</td>
+            
+            <td style="width: 90%;">
+                <table border="1" style="width: 100%; height: 80px;">
+                    <tr>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 40px;">H</td>
+            <td>I</td>
+        </tr>
+    </table>
+    
+    <table border="1" style="
+        width: 90%;
+        height: 120px;">
+        <tr>
+            <td>J</td>
+            
+            <td>
+                <table border="1" style="width: 100%;">
+                    <tr>
+                        <td>K</td>
+                        
+                        <td>
+                            <table border="1" style="width: 100%; height: 90px;">
+                                <tr>
+                                    <td>L</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height: 30px;">N</td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <h1 style="background-color:rgb(28, 138, 87); text-align: center;">User Registration Form</h1>
+
+    <form style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+
+            <p style="font-size: 20px;"><b><u>Personal Information</u></b></p>
+
+            <label>First Name:</label>
+            <input type="text" name="fname" placeholder="Enter your first name" required><br>
+
+            <label>Last Name:</label>
+            <input type="text" name="lname" placeholder="Enter your last name" required><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter your email address" required><br>
+
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{11}"><br><br>
+
+            <label>Education Qualification:</label>
+            <input type="checkbox" value="SSC"> SSC
+            <input type="checkbox" value="HSC"> HSC
+            <input type="checkbox" value="BSc"> BSc
+            <input type="checkbox" value="MSc"> MSc
+            <input type="checkbox" value="PhD"> PhD<br>
+
+
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" required><br>
+
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label>Address:</label>
+            <textarea name="address" placeholder="Enter your address" required></textarea><br>
+
+            <p style="font-size: 20px;"><b><u>Account Registration</u></b></p>
+            <label>Username:</label>
+            <input type="text" name="username" placeholder="Choose a username" required><br>
+
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="Choose a password" required minlength="8"><br>
+
+            <label>Confirm Password:</label>
+            <input type="password" name="confirm_password" placeholder="Confirm your password" required minlength="8"><br><br>
+
+        <input style="color: white; width: 100px; background-color: rgb(92, 4, 128);" type="submit" value="Register">
+    </form>
+</body>
+</html>
